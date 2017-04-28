@@ -29,12 +29,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ILoginToTwitter.cs" />
-    <Compile Include="Services\Login.cs" />
     <Compile Include="Constans.cs" />
+    <Compile Include="Services\Authentication\IAuthenticationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="Services\Authentication\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
