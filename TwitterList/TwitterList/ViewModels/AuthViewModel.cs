@@ -11,8 +11,25 @@ namespace TwitterList.ViewModels
         public AuthViewModel(IAuthenticationService authServ)
         {
             _authServ = authServ;
+            _authServ.LoginToTwitter();
         }
+        private MvxCommand _clickCommand;
 
-
+        public Command ClickCommand
+        {
+            get
+            {
+                return _clickCommand ?? (_clickCommand = new Command(async (_) =>//
+                {
+                    if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password))
+                    {
+                        return;
+                    }
+                    var doc = await _loginServiсe.Login(Login, Password);
+                    string Message = DialogFilter.LinqFilter(doc);
+                    RootObject obj = JsonConvert.DeserializeObject<RootObject>(Message);
+                    _dialogService.ShowMessage(obj.ResultMessage);
+                }
+        }
+        }
     }
-}
