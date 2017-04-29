@@ -47,6 +47,9 @@ namespace TwitterList_Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::TwitterList_Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TwitterList_Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::TwitterList_Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::Xamarin.Auth.Resource.Id.webview = global::TwitterList_Droid.Resource.Id.webview;
+			global::Xamarin.Auth.Resource.Layout.activity_webview = global::TwitterList_Droid.Resource.Layout.activity_webview;
+			global::Xamarin.Auth.Resource.String.title_activity_webview = global::TwitterList_Droid.Resource.String.title_activity_webview;
 		}
 		
 		public partial class Attribute
@@ -86,14 +89,17 @@ namespace TwitterList_Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int MvvmCrossTagId = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int MvvmCrossTagId = 2131034112;
 			
-			// aapt resource value: 0x7f040001
-			public const int MvxBindingTagUnique = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int MvxBindingTagUnique = 2131034113;
 			
-			// aapt resource value: 0x7f040002
-			public const int myButton = 2130968578;
+			// aapt resource value: 0x7f050003
+			public const int TwitterButton = 2131034115;
+			
+			// aapt resource value: 0x7f050002
+			public const int webview = 2131034114;
 			
 			static Id()
 			{
@@ -109,7 +115,10 @@ namespace TwitterList_Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int activity_webview = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -140,11 +149,14 @@ namespace TwitterList_Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int app_name = 2131034113;
+			// aapt resource value: 0x7f040002
+			public const int app_name = 2130968578;
 			
-			// aapt resource value: 0x7f050000
-			public const int hello = 2131034112;
+			// aapt resource value: 0x7f040001
+			public const int hello = 2130968577;
+			
+			// aapt resource value: 0x7f040000
+			public const int title_activity_webview = 2130968576;
 			
 			static String()
 			{

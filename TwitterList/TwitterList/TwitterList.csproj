@@ -31,10 +31,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constans.cs" />
     <Compile Include="Services\Authentication\IAuthenticationService.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Services\Authentication\CoreAuthenticationService.cs" />
+    <Compile Include="ViewModels\AuthViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Services\Authentication\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
