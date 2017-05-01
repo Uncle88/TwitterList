@@ -1,5 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
+using MvvmCross.Platform.Platform;
 using TwitterList.Authentication;
 using TwitterList.ViewModels;
 
@@ -7,10 +9,18 @@ namespace TwitterList
 {
     public class App : MvxApplication
     {
-        public App()
+        public override void Initialize()
         {
-            Mvx.RegisterType<IAuthenticationService, CoreAuthenticationService>();
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<AuthViewModel>());
+            CreatableTypes()
+                .EndingWith("Service")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
+            RegisterAppStart<ViewModels.AuthViewModel>();
+            Mvx.RegisterSingleton(() =>
+                                       {
+                                           var provider = Mvx.IocConstruct<IAuthenticationService>();
+                                           return provider;
+                                       });
         }
     }
 }
