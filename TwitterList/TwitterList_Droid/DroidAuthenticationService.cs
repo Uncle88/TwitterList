@@ -1,9 +1,11 @@
 ﻿using System;
+using TwitterList;
+using TwitterList.Authentication;
 using Xamarin.Auth;
 
-namespace TwitterList.Authentication
+namespace TwitterList_Droid
 {
-    public class CoreAuthenticationService : Constans, IAuthenticationService
+    public class DroidAuthenticationService : Constans, IAuthenticationService
     {
         public void LoginToTwitter()
         {
@@ -25,7 +27,8 @@ namespace TwitterList.Authentication
                     AccountStore.Create().Save(loggedInAccount, "Twitter");
                 }
             };
+
+            StartActivity(auth.GetUI(this));
         }
     }
 }
-

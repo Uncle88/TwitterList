@@ -32,7 +32,6 @@
     <Compile Include="Constans.cs" />
     <Compile Include="Services\Authentication\IAuthenticationService.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Services\Authentication\CoreAuthenticationService.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

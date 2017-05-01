@@ -1,10 +1,19 @@
 ﻿using System;
+using Android.Content;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Platform;
+using TwitterList;
+
 namespace TwitterList_Droid
 {
-    public class Setup
+    public class Setup : MvxAndroidSetup
     {
-        public Setup()
+        public Setup(Context applicationContext) : base(applicationContext)
         {
+        }
+        protected override IMvxApplication CreateApp()
+        {
+            return new App();
         }
     }
 }
