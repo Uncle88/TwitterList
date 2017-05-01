@@ -6,7 +6,7 @@ namespace TwitterList.ViewModels
 {
     public class AuthViewModel : MvxViewModel
     {
-        private readonly IAuthenticationService _authServ;
+        private IAuthenticationService _authServ;
 
         public AuthViewModel(IAuthenticationService authServ)
         {

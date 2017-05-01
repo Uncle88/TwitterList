@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
+using MvvmCross.Platform.Platform;
 using TwitterList.Authentication;
 using TwitterList.ViewModels;
 
@@ -34,10 +35,11 @@ namespace TwitterList
                 .RegisterAsLazySingleton();
             RegisterAppStart<ViewModels.AuthViewModel>();
             Mvx.RegisterSingleton(() =>
-{
-    var provider = Mvx.IocConstruct<IAuthenticationService>();
-    return provider;
-});
+                                       {
+                                           var provider = Mvx.IocConstruct<IAuthenticationService>();
+                                           return provider;
+                                       });
+            // Mvx.RegisterSingleton<IMvxTrace>(new DebugTrace());
         }
     }
 }

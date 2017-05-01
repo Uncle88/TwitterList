@@ -1,7 +1,14 @@
 ﻿using System;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Droid;
 using TwitterList;
 using TwitterList.Authentication;
 using Xamarin.Auth;
+using MvvmCross.Platform.Droid.Views;
+using MvvmCross.Droid.Simple;
+using TwitterList_Droid.Views;
+using Android.App;
+using MvvmCross.Core.ViewModels;
 
 namespace TwitterList_Droid
 {
@@ -22,13 +29,15 @@ namespace TwitterList_Droid
             {
                 if (eventArgs.IsAuthenticated)
                 {
-                    Account loggedInAccount = eventArgs.Account;
                     //save the account data for a later session, according to Twitter docs, this doesn't expire
+                    Account loggedInAccount = eventArgs.Account;
                     AccountStore.Create().Save(loggedInAccount, "Twitter");
                 }
+                else return;
             };
+            //StartActivity(auth.GetUI(this));
+            var filehandler = Mvx.Resolve<IAuthenticationService>();
 
-            StartActivity(auth.GetUI(this));
         }
     }
 }

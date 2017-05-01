@@ -1708,14 +1708,14 @@ namespace TwitterList_Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0b0059
+			public const int AuthCommand = 2131427417;
+			
 			// aapt resource value: 0x7f0b0009
 			public const int MvvmCrossTagId = 2131427337;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int MvxBindingTagUnique = 2131427338;
-			
-			// aapt resource value: 0x7f0b0059
-			public const int TwitterButton = 2131427417;
 			
 			// aapt resource value: 0x7f0b005d
 			public const int action0 = 2131427421;
@@ -2170,7 +2170,7 @@ namespace TwitterList_Droid
 			public const int activity_webview = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int Main = 2130968604;
+			public const int AuthView = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
 			public const int notification_action = 2130968605;
