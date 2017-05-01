@@ -10,6 +10,7 @@ namespace TwitterList_Droid.Views
 {
     [Activity(Label = "TwitterList_Droid", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     [MvxViewFor(typeof(AuthViewModel))]
+
     public class AuthView : MvxActivity
     {
         public new AuthViewModel ViewModel

@@ -9,24 +9,6 @@ namespace TwitterList
 {
     public class App : MvxApplication
     {
-        public App()
-        {
-            //Mvx.RegisterType<IAuthenticationService, CoreAuthenticationService>();
-            //Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<AuthViewModel>());
-
-            //var auth = Mvx.IocConstruct()
-
-            //CreatableTypes()
-            //.EndingWith("Service")
-            //.AsInterfaces()
-            //.RegisterAsLazySingleton();
-
-            //RegisterAppStart<ViewModels.AuthViewModel>;
-            //Mvx.RegisterType<IAuthenticationService>();
-
-            //Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<AuthViewModel>());
-        }
-
         public override void Initialize()
         {
             CreatableTypes()
@@ -39,7 +21,6 @@ namespace TwitterList
                                            var provider = Mvx.IocConstruct<IAuthenticationService>();
                                            return provider;
                                        });
-            // Mvx.RegisterSingleton<IMvxTrace>(new DebugTrace());
         }
     }
 }

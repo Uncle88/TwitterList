@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using TwitterList.Authentication;
 
@@ -14,15 +15,13 @@ namespace TwitterList.ViewModels
 
         }
 
-        private IMvxCommand _authCommand;
+        private MvxCommand _authCommand;
 
-        public IMvxCommand AuthCommand
+        public ICommand AuthCommand
         {
             get
             {
-                _authCommand = _authCommand ?? new MvxCommand(
-                     () => _authServ.LoginToTwitter());
-
+                _authCommand = _authCommand ?? new MvxCommand(() => _authServ.LoginToTwitter());
                 return _authCommand;
             }
         }

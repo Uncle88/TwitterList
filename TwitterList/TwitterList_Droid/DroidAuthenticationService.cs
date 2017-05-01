@@ -1,14 +1,8 @@
 ﻿using System;
-using MvvmCross.Platform;
-using MvvmCross.Platform.Droid;
 using TwitterList;
 using TwitterList.Authentication;
 using Xamarin.Auth;
 using MvvmCross.Platform.Droid.Views;
-using MvvmCross.Droid.Simple;
-using TwitterList_Droid.Views;
-using Android.App;
-using MvvmCross.Core.ViewModels;
 
 namespace TwitterList_Droid
 {
@@ -36,8 +30,7 @@ namespace TwitterList_Droid
                 else return;
             };
             //StartActivity(auth.GetUI(this));
-            var filehandler = Mvx.Resolve<IAuthenticationService>();
-
+            //var filehandler = Mvx.Resolve<IAuthenticationService>();
         }
     }
 }
