@@ -3,9 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/AuthCommand"
-        android:text="Authentication to Twitter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Command
+        android:id="@+id/TwitterCommand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Twitter"
+        android:background="#55ACEE" />
 </LinearLayout>

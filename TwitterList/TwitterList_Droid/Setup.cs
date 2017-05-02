@@ -25,7 +25,9 @@ namespace TwitterList_Droid
         {
             base.InitializePlatformServices();
 
-            Mvx.RegisterType<IAuthenticationService, DroidAuthenticationService>();
+            //Mvx.RegisterType<IAuthenticationService, DroidAuthenticationService>();
+            //Mvx.RegisterSingleton(typeof(IAuthenticationService), new DroidAuthenticationService());
+            Mvx.RegisterSingleton<IAuthenticationService>(() => new DroidAuthenticationService());
         }
     }
 }

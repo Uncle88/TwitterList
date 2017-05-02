@@ -4,6 +4,8 @@ using Android.Content.PM;
 using Android.OS;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
+using TwitterList.Authentication;
 using TwitterList.ViewModels;
 
 namespace TwitterList_Droid.Views
@@ -19,16 +21,18 @@ namespace TwitterList_Droid.Views
             set { base.ViewModel = value; }
         }
 
-        protected override void OnViewModelSet()
-        {
-            base.OnViewModelSet();
-            SetContentView(Resource.Layout.AuthView);
-        }
-
-        //protected override void OnCreate(Bundle bundle)
+        //protected override void OnViewModelSet()
         //{
-        //base.OnCreate(bundle);
-        //SetContentView(Resource.Layout.Main);
+        //base.OnViewModelSet();
+        //SetContentView(Resource.Layout.AuthView);
         //}
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.AuthView);
+            this.ViewModel = Mvx.Resolve<AuthViewModel>();
+            //var filehandler = Mvx.Resolve<IAuthenticationService>();
+        }
     }
 }

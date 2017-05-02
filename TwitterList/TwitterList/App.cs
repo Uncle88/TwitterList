@@ -15,12 +15,14 @@ namespace TwitterList
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-            RegisterAppStart<ViewModels.AuthViewModel>();
-            Mvx.RegisterSingleton(() =>
+            Mvx.LazyConstructAndRegisterSingleton(() =>
                                        {
                                            var provider = Mvx.IocConstruct<IAuthenticationService>();
                                            return provider;
                                        });
+            RegisterAppStart<ViewModels.AuthViewModel>();
+            //Mvx.RegisterSingleton<IAuthenticationService>(new AuthenticationService());
+
         }
     }
 }
