@@ -116,14 +116,12 @@
     <Compile Include="Views\AuthView.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="DroidAuthenticationService.cs" />
-    <Compile Include="SplashScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
-    <None Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\AuthView.axml" />

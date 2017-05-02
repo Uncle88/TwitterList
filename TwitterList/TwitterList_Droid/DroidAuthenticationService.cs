@@ -19,9 +19,6 @@ namespace TwitterList_Droid
         {
             var activity = this.Context as Activity;
 
-            //var filehandler = Mvx.Resolve<IAuthenticationService>();
-            //filehandler.LoginToTwitter();
-
             var auth = new OAuth1Authenticator(
                                                TWITTER_KEY,
                                                TWITTER_SECRET,
@@ -50,10 +47,17 @@ namespace TwitterList_Droid
                     var request = new OAuth2Request("GET", new Uri("https://api.twitter.com/1.1/account/verify_credentials.json"), null, eventArgs.Account);
                     request.GetResponseAsync().ContinueWith(t =>
                     {
-                        if (t.IsFaulted)
-                        //Alert.GetAlertMessage((Mono.Security.Interface.AlertDescription)t.Exception.InnerException.Message);
+                        if (t.IsCompleted)
                         {
                             var obj = JsonValue.Parse(t.Result.GetResponseText());
+                        }
+                        else
+                        {
+                            var builder = new AlertDialog.Builder(activity);
+                            builder.SetMessage("Response is fauled!");
+                            builder.SetPositiveButton("Ok", (o, e) => { });
+                            builder.Create().Show();
+                            return;
                         }
                     });
                 }

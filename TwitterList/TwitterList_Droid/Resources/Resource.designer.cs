@@ -1997,7 +1997,7 @@ namespace TwitterList_Droid
 			public const int MvxBindingTagUnique = 2131492874;
 			
 			// aapt resource value: 0x7f0c0065
-			public const int TwitterCommand = 2131492965;
+			public const int TwitterButton = 2131492965;
 			
 			// aapt resource value: 0x7f0c0069
 			public const int action0 = 2131492969;

@@ -31,8 +31,9 @@ namespace TwitterList_Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.AuthView);
-            this.ViewModel = Mvx.Resolve<AuthViewModel>();
+            //this.ViewModel = Mvx.Resolve<AuthViewModel>();
             //var filehandler = Mvx.Resolve<IAuthenticationService>();
+            //Mvx.RegisterSingleton<IAuthenticationService>(new DroidAuthenticationService());
         }
     }
 }
