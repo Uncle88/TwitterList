@@ -23,9 +23,10 @@ namespace TwitterList_Droid
 
         protected override void InitializePlatformServices()
         {
+            //Mvx.RegisterType<IAuthenticationService, DroidAuthenticationService>();
+            //Mvx.RegisterSingleton(typeof(IAuthenticationService), new DroidAuthenticationService());
+            Mvx.RegisterSingleton<IAuthenticationService>(new DroidAuthenticationService());
             base.InitializePlatformServices();
-
-            Mvx.RegisterType<IAuthenticationService, DroidAuthenticationService>();
         }
     }
 }
