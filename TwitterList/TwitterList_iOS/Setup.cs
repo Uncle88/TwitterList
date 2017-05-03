@@ -1,7 +1,8 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.Platform.Platform;
+using MvvmCross.Platform;
+using TwitterList.Authentication;
 using UIKit;
 
 namespace TwitterList_iOS
@@ -23,9 +24,12 @@ namespace TwitterList_iOS
             return new TwitterList.App();
         }
 
-        protected override IMvxTrace CreateDebugTrace()
+        protected override void InitializePlatformServices()
         {
-            return new DebugTrace();
+            //Mvx.RegisterType<IAuthenticationService, DroidAuthenticationService>();
+            //Mvx.RegisterSingleton(typeof(IAuthenticationService), new DroidAuthenticationService());
+            Mvx.RegisterSingleton<IAuthenticationService>(new IosAuthenticationService());
+            base.InitializePlatformServices();
         }
     }
 }

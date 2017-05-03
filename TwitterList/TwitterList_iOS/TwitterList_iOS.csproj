@@ -131,6 +131,7 @@
     <Compile Include="Views\AuthView.designer.cs">
       <DependentUpon>AuthView.cs</DependentUpon>
     </Compile>
+    <Compile Include="IosAuthenticationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TwitterList\TwitterList.csproj">
