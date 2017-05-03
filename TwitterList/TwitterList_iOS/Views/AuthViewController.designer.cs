@@ -12,8 +12,8 @@ namespace TwitterList_iOS.Views
 	[Register ("AuthViewController")]
 	partial class AuthViewController
 	{
-		[Action ("TwitterAuth:")]
-		partial void TwitterAuth (Foundation.NSObject sender);
+		[Action ("authButton:")]
+		partial void authButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

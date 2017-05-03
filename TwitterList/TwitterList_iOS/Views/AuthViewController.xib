@@ -19,20 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKk-co-moj">
-                    <rect key="frame" x="20" y="50" width="335" height="117"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq4-Cs-joT">
+                    <rect key="frame" x="50" y="300" width="275" height="67"/>
                     <state key="normal" title="Button"/>
                     <connections>
-                        <action selector="TwitterAuth:" destination="-1" eventType="touchUpInside" id="1DT-cf-t50"/>
+                        <action selector="authButton:" destination="-1" eventType="touchUpInside" id="8UH-hF-IWP"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="hKk-co-moj" secondAttribute="trailing" constant="20" id="645-2p-rG7"/>
-                <constraint firstAttribute="bottom" secondItem="hKk-co-moj" secondAttribute="bottom" constant="500" id="7fd-qK-JZu"/>
-                <constraint firstItem="hKk-co-moj" firstAttribute="top" secondItem="2" secondAttribute="top" constant="50" id="STk-d6-NLU"/>
-                <constraint firstItem="hKk-co-moj" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="iD1-kb-jYh"/>
+                <constraint firstItem="Qq4-Cs-joT" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="50" id="hbC-ev-FE0"/>
+                <constraint firstAttribute="trailing" secondItem="Qq4-Cs-joT" secondAttribute="trailing" constant="50" id="nUn-Wd-vrY"/>
+                <constraint firstAttribute="bottom" secondItem="Qq4-Cs-joT" secondAttribute="bottom" constant="300" id="odK-3E-Wb9"/>
+                <constraint firstItem="Qq4-Cs-joT" firstAttribute="top" secondItem="2" secondAttribute="top" constant="300" id="r94-sq-Y66"/>
             </constraints>
         </view>
     </objects>
