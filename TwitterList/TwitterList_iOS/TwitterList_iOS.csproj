@@ -113,7 +113,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="Views\AuthViewController.xib" />
+    <InterfaceDefinition Include="Views\AuthView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -127,9 +127,9 @@
     <Compile Include="Setup.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="DebugTrace.cs" />
-    <Compile Include="Views\AuthViewController.cs" />
-    <Compile Include="Views\AuthViewController.designer.cs">
-      <DependentUpon>AuthViewController.cs</DependentUpon>
+    <Compile Include="Views\AuthView.cs" />
+    <Compile Include="Views\AuthView.designer.cs">
+      <DependentUpon>AuthView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
