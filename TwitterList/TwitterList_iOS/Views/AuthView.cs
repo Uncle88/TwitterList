@@ -22,6 +22,9 @@ namespace TwitterList_iOS.Views
         {
             base.ViewDidLoad();
             this.CreateBinding(authButton).To((AuthViewModel vm) => vm.AuthCommand).Apply();
+            authButton.TintColor = UIColor.Red;
+            authButton.BackgroundColor = UIColor.Cyan;
+            authButton.Layer.CornerRadius = 30;
         }
     }
 }

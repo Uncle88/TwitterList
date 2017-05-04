@@ -6,6 +6,7 @@
 //
 using Foundation;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace TwitterList_iOS.Views
 {
@@ -14,6 +15,7 @@ namespace TwitterList_iOS.Views
     {
         [Outlet]
         UIKit.UIButton authButton { get; set; }
+
 
         void ReleaseDesignerOutlets()
         {
