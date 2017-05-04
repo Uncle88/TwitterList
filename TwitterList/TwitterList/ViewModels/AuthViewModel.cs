@@ -23,8 +23,8 @@ namespace TwitterList.ViewModels
         {
             get
             {
-                _authCommand = _authCommand ?? new MvxCommand(() => ShowViewModel<AuthViewModel>(), () => true);
-                _authServ.LoginToTwitter();
+                _authCommand = _authCommand ?? new MvxCommand(() => _authServ.LoginToTwitter());
+                //ShowViewModel<AuthViewModel>(), () => true
                 return _authCommand;
             }
         }
