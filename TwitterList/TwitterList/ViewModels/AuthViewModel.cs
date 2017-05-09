@@ -14,8 +14,6 @@ namespace TwitterList.ViewModels
         public AuthViewModel(IAuthenticationService authServ)
         {
             _authServ = authServ;
-            //Mvx.IocConstruct<IAuthenticationService>();
-            //Mvx.CanResolve<IAuthenticationService>();
         }
 
         private MvxCommand _authCommand;
@@ -23,10 +21,14 @@ namespace TwitterList.ViewModels
         {
             get
             {
-                _authCommand = _authCommand ?? new MvxCommand(() => ShowViewModel<AuthViewModel>(), () => true);
-                _authServ.LoginToTwitter();
+                _authCommand = _authCommand ?? new MvxCommand(LoginTwitter);
                 return _authCommand;
             }
+        }
+
+        private void LoginTwitter()
+        {
+            _authServ.LoginToTwitter();
         }
     }
 }

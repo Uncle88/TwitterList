@@ -1,13 +1,8 @@
-﻿using System;
-using Android.Content;
+﻿using Android.Content;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
-using TwitterList;
-using MvvmCross.Platform.Droid.Views;
-using TwitterList.Authentication;
 using MvvmCross.Platform;
-using MvvmCross.Platform.Platform;
-using System.Diagnostics;
+using TwitterList.Authentication;
 
 namespace TwitterList_Droid
 {

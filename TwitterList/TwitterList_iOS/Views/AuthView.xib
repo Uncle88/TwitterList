@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController">
             <connections>
+                <outlet property="authButton" destination="vI8-BX-4Ut" id="PkW-zD-5bO"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
             </connections>
         </placeholder>
@@ -19,20 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKk-co-moj">
-                    <rect key="frame" x="20" y="50" width="335" height="117"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI8-BX-4Ut">
+                    <rect key="frame" x="35" y="330" width="305" height="87"/>
                     <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="TwitterAuth:" destination="-1" eventType="touchUpInside" id="1DT-cf-t50"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="hKk-co-moj" secondAttribute="trailing" constant="20" id="645-2p-rG7"/>
-                <constraint firstAttribute="bottom" secondItem="hKk-co-moj" secondAttribute="bottom" constant="500" id="7fd-qK-JZu"/>
-                <constraint firstItem="hKk-co-moj" firstAttribute="top" secondItem="2" secondAttribute="top" constant="50" id="STk-d6-NLU"/>
-                <constraint firstItem="hKk-co-moj" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="iD1-kb-jYh"/>
+                <constraint firstItem="vI8-BX-4Ut" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="35" id="0He-kF-9gE"/>
+                <constraint firstAttribute="bottom" secondItem="vI8-BX-4Ut" secondAttribute="bottom" constant="250" id="1eb-kY-AXV"/>
+                <constraint firstAttribute="trailing" secondItem="vI8-BX-4Ut" secondAttribute="trailing" constant="35" id="Uvq-Wo-Q5V"/>
+                <constraint firstItem="vI8-BX-4Ut" firstAttribute="top" secondItem="2" secondAttribute="top" constant="330" id="ckK-dr-W1j"/>
             </constraints>
         </view>
     </objects>

@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterList", "TwitterList\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterList_iOS", "TwitterList_iOS\TwitterList_iOS.csproj", "{16655C86-D372-445A-AC05-903DE0980FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterList_Droid", "TwitterList_Droid\TwitterList_Droid.csproj", "{DF3D3014-A2A4-4CF9-8589-61566DE526C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterListDroid", "TwitterList_Droid\TwitterListDroid.csproj", "{DF3D3014-A2A4-4CF9-8589-61566DE526C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
