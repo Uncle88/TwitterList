@@ -16,17 +16,6 @@ namespace TwitterList
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
             RegisterAppStart<ViewModels.AuthViewModel>();
-            //Mvx.LazyConstructAndRegisterSingleton(() =>
-            //{
-            //var provider = Mvx.IocConstruct<IAuthenticationService>();
-            //return provider;
-            //});
-
-            //Mvx.IocConstruct<IAuthenticationService>();
-
-
-            //Mvx.RegisterSingleton<IAuthenticationService>(new AuthenticationService());
-
         }
     }
 }

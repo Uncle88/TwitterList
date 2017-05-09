@@ -20,8 +20,8 @@ namespace TwitterList_Droid
             var activity = this.Context as Activity;
 
             var auth = new OAuth1Authenticator(
-                                               TWITTER_KEY,
-                                               TWITTER_SECRET,
+                                               Consumer_KEY,
+                                               Consumer_SECRET,
                                                new Uri(TWITTER_REQTOKEN_URL),
                                                new Uri(TWITTER_AUTH),
                                                new Uri(TWITTER_ACCESSTOKEN_URL),

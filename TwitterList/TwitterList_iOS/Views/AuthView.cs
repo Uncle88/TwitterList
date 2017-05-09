@@ -21,6 +21,7 @@ namespace TwitterList_iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            this.CreateBindingSet<AuthView, AuthViewModel>();
             this.CreateBinding(authButton).To((AuthViewModel vm) => vm.AuthCommand).Apply();
             authButton.TintColor = UIColor.Red;
             authButton.BackgroundColor = UIColor.Cyan;
